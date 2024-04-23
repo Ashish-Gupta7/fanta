@@ -1,0 +1,235 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+}
+*::selection{
+    background-color: #FF8700;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 5%;
+    left: 10%;
+    width: 80%;
+    margin: auto;
+    z-index: 100;
+}
+nav .nav-mid{
+    display: flex;
+    align-items: center;
+    gap: 4vw;
+}
+nav .nav-mid .hoverAnim{
+    position: relative;
+}
+nav .nav-mid .hoverAnim::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: .1vw;
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    background-color: #e0e0e0;
+    transition: transform .25s ease-out;
+}
+nav .nav-mid .hoverAnim:hover::before{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+nav .navAnchor{
+    text-decoration: none;
+    color: #eee;
+}
+nav i.navAnchor{
+    font-size: 1.4vw;
+}
+
+.page{
+    width: 100%;
+    height: 100vh;
+}
+
+.page1{
+    background-color: #FF8700;
+    padding: 3vw 7vw;
+    position: relative;
+}
+.page1 .pg1Hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: #eee;
+    font-size: 25vw;
+}
+.page1 .pg1Img{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;    
+}
+.page1 .pg1Img .img{
+    position: absolute;
+    height: 20vh;
+}
+.page1 .pg1Img .img1{
+    height: 70%;
+    top: 50%;
+    left: 43%;
+    transform: translate(-50%, -50%);
+}
+.page1 .pg1Img .img2{
+    top: 8%;
+    rotate: 45deg;
+    height: 50%;
+    left: -10%;
+}
+.page1 .pg1Img .img3{
+    bottom: 5%;
+    right: 15%;
+    height: 30%;
+    rotate: -100deg;
+}
+.page1 .pg1Img .img4{
+    top: 10%;
+}
+.page1 .pg1Img .img5{
+    top: 73%;
+    left: 53%;
+    transform: translate(-50%, -50%);
+    height: 45%;
+}
+.page1 .pg1Img .img6{
+    top: 26%;
+    left: 32%;
+    transform: translate(-50%, -50%);
+    height: 35%;
+}
+.page1 .pg1Img .img7{
+    right: 5%;
+    top: 8%;
+    height: 40%;
+}
+
+.page2{
+    background-color: #4D231C;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.page2 .pg2Text{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    text-align: justify;
+    padding: 0 7% 6% 0;
+    color: #eee;
+}
+.page2 .pg2Text h1{
+    font-size: 4vw;
+    margin-bottom: 5vh;
+}
+.page2 .pg2Img{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15% 5% 0 0;
+}
+.page2 .pg2Img svg{
+    rotate: 10deg;
+    height: 70vh;
+}
+
+.page3{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #FF8A00;
+    padding: 0 7vw;   
+}
+.page3 .card{
+    width: 27%;
+    height: 66%;
+    margin-top: 18vh;
+    background-color: #C3C1BD;
+    border-radius: .8vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.page3 .card .img{
+    height: 70%;
+    width: 80%;
+    position: relative;
+}
+.page3 .card h2{
+    font-size: 2vw;
+    text-transform: uppercase;
+    margin-top: .4vh;
+    color: #eee;
+}
+.page3 .card .btn{
+    padding: .8vw 1.7vw;
+    border-radius: .5vw;
+    margin-top: .4vh;
+    font-weight: 700;
+    background-color: #eee;
+}
+.page3 .card .img img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.page3 .card.cocacola{
+    background-color: #D6002C;
+}
+.page3 .card.cocacola .img img{
+    width: 15vw;
+    height: 130%;
+    top: -32%;
+    left: 10%;
+}
+.page3 .card.cocacola .btn{
+    color: #D6002C;
+}
+.page3 .card.fanta{
+    background-color: orangered;
+}
+.page3 .card.fanta .img img{
+    width: 33vw;
+    height: 130%;
+    top: -31%;
+    left: -39%;
+}
+.page3 .card.fanta .btn{
+    color: orangered;
+}
+.page3 .card.pepsi{
+    background-color: #011140;
+}
+.page3 .card.pepsi .img img{
+    width: 24vw;
+    height: 138%;
+    top: -35%;
+    left: -14%;
+}
+.page3 .card.pepsi .btn{
+    color: #011140;
+}
